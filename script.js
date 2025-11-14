@@ -105,6 +105,10 @@ function passStrength(password){
 
     if(password.length===0){
         passStr.innerHTML = "";
+        bars.forEach(bar=>{
+            bar.style.backgroundColor = "#24232C";
+            bar.style.border = "2px solid #E6E5EA";
+        })
     }
 }
 
