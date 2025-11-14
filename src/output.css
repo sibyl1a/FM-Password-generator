@@ -221,6 +221,9 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -229,6 +232,15 @@
   }
   .flex-1 {
     flex: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -247,6 +259,9 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
@@ -291,6 +306,9 @@
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
   .py-3\.5 {
     padding-block: calc(var(--spacing) * 3.5);
   }
@@ -306,14 +324,30 @@
   .text-green-200\! {
     color: var(--color-green-200) !important;
   }
+  .text-grey-600 {
+    color: var(--color-grey-600);
+  }
   .text-grey-600\! {
     color: var(--color-grey-600) !important;
+  }
+  .text-grey-800 {
+    color: var(--color-grey-800);
   }
   .text-grey-800\! {
     color: var(--color-grey-800) !important;
   }
+  .text-white {
+    color: var(--color-white);
+  }
   .text-white\! {
     color: var(--color-white) !important;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .outline-none {
     --tw-outline-style: none;
@@ -384,9 +418,64 @@
       margin-bottom: calc(var(--spacing) * 8);
     }
   }
+  .md\:mb-\[25px\] {
+    @media (width >= 48rem) {
+      margin-bottom: 25px;
+    }
+  }
   .md\:mb-\[30px\] {
     @media (width >= 48rem) {
       margin-bottom: 30px;
+    }
+  }
+  .md\:mb-\[41px\] {
+    @media (width >= 48rem) {
+      margin-bottom: 41px;
+    }
+  }
+  .md\:ml-3 {
+    @media (width >= 48rem) {
+      margin-left: calc(var(--spacing) * 3);
+    }
+  }
+  .md\:gap-3 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 3);
+    }
+  }
+  .md\:gap-5 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:py-4 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:py-5 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:py-5\! {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 5) !important;
+    }
+  }
+  .md\:py-5\.5\! {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 5.5) !important;
+    }
+  }
+  .md\:py-6 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:py-6\! {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 6) !important;
     }
   }
   .md\:pt-4 {
@@ -397,6 +486,11 @@
   .md\:pr-7 {
     @media (width >= 48rem) {
       padding-right: calc(var(--spacing) * 7);
+    }
+  }
+  .md\:pl-3 {
+    @media (width >= 48rem) {
+      padding-left: calc(var(--spacing) * 3);
     }
   }
   .md\:pl-4 {
@@ -421,6 +515,21 @@
       font-size: 18px !important;
     }
   }
+  .md\:text-\[20px\]\! {
+    @media (width >= 48rem) {
+      font-size: 20px !important;
+    }
+  }
+  .md\:text-\[24px\] {
+    @media (width >= 48rem) {
+      font-size: 24px;
+    }
+  }
+  .md\:text-\[24px\]\! {
+    @media (width >= 48rem) {
+      font-size: 24px !important;
+    }
+  }
   .md\:text-\[32px\]\! {
     @media (width >= 48rem) {
       font-size: 32px !important;
@@ -430,6 +539,71 @@
     @media (width >= 48rem) {
       --tw-font-weight: var(--font-weight-normal) !important;
       font-weight: var(--font-weight-normal) !important;
+    }
+  }
+  .lg\:mx-\[0px\] {
+    @media (width >= 64rem) {
+      margin-inline: 0px;
+    }
+  }
+  .lg\:mx-\[40px\] {
+    @media (width >= 64rem) {
+      margin-inline: 40px;
+    }
+  }
+  .lg\:mx-\[200px\] {
+    @media (width >= 64rem) {
+      margin-inline: 200px;
+    }
+  }
+  .lg\:mx-\[250px\] {
+    @media (width >= 64rem) {
+      margin-inline: 250px;
+    }
+  }
+  .lg\:mx-\[300px\] {
+    @media (width >= 64rem) {
+      margin-inline: 300px;
+    }
+  }
+  .lg\:mx-\[350px\] {
+    @media (width >= 64rem) {
+      margin-inline: 350px;
+    }
+  }
+  .lg\:mx-\[450px\] {
+    @media (width >= 64rem) {
+      margin-inline: 450px;
+    }
+  }
+  .lg\:mx-\[4350px\] {
+    @media (width >= 64rem) {
+      margin-inline: 4350px;
+    }
+  }
+  .lg\:mt-\[133px\] {
+    @media (width >= 64rem) {
+      margin-top: 133px;
+    }
+  }
+  .lg\:mb-\[195px\] {
+    @media (width >= 64rem) {
+      margin-bottom: 195px;
+    }
+  }
+  .xl\:mx-\[450px\] {
+    @media (width >= 80rem) {
+      margin-inline: 450px;
+    }
+  }
+  .xl\:mt-\[133px\] {
+    @media (width >= 80rem) {
+      margin-top: 133px;
+    }
+  }
+  .xl\:mb-\[195px\] {
+    @media (width >= 80rem) {
+      margin-bottom: 195px;
     }
   }
 }
@@ -544,6 +718,26 @@ input[type="checkbox"]:checked::after {
 .shake {
   animation: shake 0.5s;
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -591,6 +785,11 @@ input[type="checkbox"]:checked::after {
   inherits: false;
   initial-value: 100%;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
@@ -598,6 +797,11 @@ input[type="checkbox"]:checked::after {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
@@ -608,6 +812,7 @@ input[type="checkbox"]:checked::after {
       --tw-gradient-from-position: 0%;
       --tw-gradient-via-position: 50%;
       --tw-gradient-to-position: 100%;
+      --tw-outline-style: solid;
       --tw-font-weight: initial;
     }
   }

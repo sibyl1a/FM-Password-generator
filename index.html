@@ -7,27 +7,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="min-h-screen bg-linear-to-r from-grey-900 to-grey-950 flex flex-col">
-    <div id="passMain" class="mx-4 my-[65px] md:my-[133px] md:mx-[114px] flex-1 flex flex-col items-center gap-4">
+    <div id="passMain" class="xl:mb-[195px] xl:mt-[133px] xl:mx-[450px] lg:mb-[195px] lg:mt-[133px] lg:mx-[300px]  md:my-[133px] md:mx-[114px] mx-4 my-[65px] flex-1 flex flex-col items-center gap-4">
         <h3 class="md:text-2xl! md:mb-4 text-preset-4">Password Generator</h3>
-        <div class="w-full flex items-center p-4 bg-grey-800 md:pr-7">
+        <div class="md:pr-7 w-full flex items-center p-4 bg-grey-800">
           <input id="password-text" placeholder="P4$5W0rD!" class="md:text-[32px]! md:pl-4 text-preset-2 text-white! placeholder:text-grey-700 w-full bg-grey-800 outline-none"/>
           <span id="copied" class="text-preset-4 text-green-200! mr-3 hidden">COPIED</span>
           <svg id="copy" onclick="copyToClipboard()" class="hover:cursor-pointer fill-current text-green-200 hover:text-white" width="21" height="24" viewBox="0 0 21 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z" fill="currentColor"/></svg>
         </div>
         <div class="flex flex-col w-full bg-grey-800 p-4 md:pr-7 md:mt-2">
           <div class="flex flex-row justify-between items-center mb-2 md:pt-4">
-            <h3 class="md:text-[18px]! md:pl-4 md:font-normal! text-preset-4 text-white!">Character Length</h3>
+            <h3 class="md:text-[18px]! md:pl-4 md:font-normal! text-preset-4 text-white! md:mb-4">Character Length</h3>
             <span id="display" class="md:text-[32px]! text-preset-2 text-green-200!">0</span>
           </div>
           <input id="slider" type="range" min="0" max="20" value="13" class="mb-8 md:pl-4"/>
-          <fieldset class="md:text-[18px]/4! md:font-normal! text-preset-4 text-white! flex flex-col gap-4 mb-6 md:pl-4 ">
+          <fieldset class="md:text-[18px]/4! md:font-normal! text-preset-4 text-white! flex flex-col gap-4 mb-6 md:pl-4 md:gap-5 md:mb-8">
             <div>
               <input type="checkbox" id="upperCaseLetters" name="upperCaseLetters" />
-              <label for="upperCaseLetter">Include Uppercase Letters</label>
+              <label for="upperCaseLetters">Include Uppercase Letters</label>
             </div>
             <div>
               <input type="checkbox" id="lowerCaseLetters" name="lowerCaseLetters" />
-              <label for="lowercaseLetters">Include Lowercase Letters</label>
+              <label for="lowerCaseLetters">Include Lowercase Letters</label>
             </div>
             <div>
               <input type="checkbox" id="numbers" name="numbers" />
@@ -38,8 +38,8 @@
               <label for="symbols">Include Symbols</label>
             </div>
           </fieldset>
-          <div class="flex flex-row items-center justify-between px-4 py-3.5 mb-4 md:mb-8 bg-grey-850">
-            <h3 class="text-preset-4 text-grey-600! md:text-[18px]!">STRENGTH</h3>
+          <div class="flex flex-row items-center justify-between px-4 py-3.5 mb-4 md:mb-8 bg-grey-850 md:ml-3 md:py-6 md:pr-7">
+            <h3 class="text-preset-4 text-grey-600! md:text-[18px]! md:pl-3">STRENGTH</h3>
             <div id="bars" class="flex flex-row gap-2 items-center">
               <h3 class="text-preset-3 text-white! pr-2" id="passStatus"></h3>
               <div class="flex flex-row gap-2 items-center" id="bar-container">
@@ -50,8 +50,8 @@
               </div>
             </div>
           </div>
-          <div class="w-full flex justify-center mt-auto md:mb-[30px]">
-            <button type="submit" id="generate" class="w-full flex items-center justify-center gap-2 bg-green-200 py-[18px]! text-preset-4 border border-transparent text-grey-800! hover:cursor-pointer hover:bg-transparent hover:border-green-200 hover:!text-green-200">
+          <div class="w-full flex justify-center mt-auto md:mb-[25px] md:pl-3">
+            <button type="submit" id="generate" class="md:text-[18px]! md:py-5.5! md:gap-5 w-full flex items-center justify-center gap-2 bg-green-200 py-[18px]! text-preset-4 border border-transparent text-grey-800! hover:cursor-pointer hover:bg-transparent hover:border-green-200 hover:!text-green-200">
               GENERATE
               <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/></svg>
             </button>
