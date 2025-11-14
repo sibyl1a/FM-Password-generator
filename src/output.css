@@ -606,6 +606,26 @@
       margin-bottom: 195px;
     }
   }
+  .\32 xl\:mx-\[450px\] {
+    @media (width >= 96rem) {
+      margin-inline: 450px;
+    }
+  }
+  .\32 xl\:mx-\[550px\] {
+    @media (width >= 96rem) {
+      margin-inline: 550px;
+    }
+  }
+  .\32 xl\:mx-\[650px\] {
+    @media (width >= 96rem) {
+      margin-inline: 650px;
+    }
+  }
+  .\32 xl\:mx-\[750px\] {
+    @media (width >= 96rem) {
+      margin-inline: 750px;
+    }
+  }
 }
 .text-preset-4 {
   font-family: "JetBrains Mono";
